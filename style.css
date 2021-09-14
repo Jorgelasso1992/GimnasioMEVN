@@ -41,7 +41,9 @@ body{
 }
 
 .container-imagen{
-    background-image: url('./bg.png');
+    background-image: url('img/pexels-sabel-blanco-1480520.jpg');
+    background-size: cover;
+    background-position: center;
     height: 240px;
     /* margin-bottom: 20px; */
 }
@@ -67,6 +69,7 @@ body{
 }
 
 .image-text{
+    color: #888888;
     margin: 0;
     padding: 9% 0;
     text-align: center;
