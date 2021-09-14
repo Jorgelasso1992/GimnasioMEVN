@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            max-width: 1400px;
+            min-width: 375px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #222222;
+        }
+
+        .header-section {
+            margin-bottom: 100px;
+        }
+
+        .header-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+
+        }
+
+        .site-title {
+            width: 30%;
+        }
+
+        .site-nav {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .site-nav>a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .site-nav>a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .logo-container {
+            width: 30%;
+        }
+
+        .logo-container__site-logo {
+            height: 80px;
+        }
+
+        .banner {
+            width: 100%;
+        }
+
+        .banner>img {
+            width: 100%;
+            height: 400px;
+            max-width: 1400px;
+            object-fit: cover;
+        }
+
+        .services-section,
+        .seccion-noticias,
+        .seccion-equipo {
+            display: flex;
+            margin-bottom: 100px;
+        }
+
+        .header-container{
+            background-color: #f7f7f7
+
+        }
+
+        .seccion-noticias {
+            flex-wrap: wrap;
+        }
+
+        .services-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .news-info {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .news-info__title {
+            align-self: center;
+        }
+
+        .seccion-pie {
+            background-color: #25294f;
+            height: 200px;
+            display: flex;
+            color: white;
+            justify-content: space-evenly;
+        }
+
+        .services-info__imagen {
+            border-radius: 50%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .team-info{
+            width: 25%;
+            padding: 15px;
+        }
+
+        .team-info__imagen{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        /* PARA TENER EN CUENTA: MODIFICACIONES CSS EMPIZAN ACÂ*/
+        .news-info__imagen{ /* PARA TENER EN CUENTA: Agregado para imágenes de la sección noticias */
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 200px;
+            height: 200px;
+        }
+        .seccion-noticias{ /* PARA TENER EN CUENTA: Agregado para imágenes de la sección noticias */
+            background: linear-gradient(-20deg, #1c2937 30%, #8e2126 50%);
+        }
+        .section-info
+        { /* PARA TENER EN CUENTA: Agregado para imágenes de la sección noticias */
+            color: white;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .news-info__title,
+        .news-info__text,
+        .news-url> a{ /* PARA TENER EN CUENTA: Agregado para imágenes de la sección noticias */
+            color: white;
+        }
+    </style>
+
+<!-- inicio encabezado del sitio -->
+    <div class="header-section">
+        <div class="header-container">
+
+            <div class="site-title">
+                <h1>Una web</h1>
+            </div>
+            
+            <!-- Inicio menú navegación -->
+            <ul class="site-nav">
+                <a href="#">Inicio</a>
+                <a href="#services">Servicios</a>
+                <a href="#news">Noticias</a>
+                <a href="#team">Nuestro equipo</a>
+            </ul>
+            <!-- Fin menú navegación -->
+
+            
+            
+            <div class="logo-container">
+                <img class="logo-container__site-logo" src="./logomision.png" alt="Logo MisionTic 2022">
+            </div>
+        </div>
+            
+        <div class="banner">
+            <img src="./banner.jpg" alt="A banner image">
+        </div>
+    </div>
+<!-- fin encabezado del sitio -->
+
+
+    <!-- inicio contenido principal -->
+    <div>
+
+
+        <h1 class="services-head" > Servicios</h1>
+        <!-- inicio sección de servicios -->
+        <div id="servicios" class="services-section">
+            <article class="services-info">
+                <img class="services-info__imagen" src="http://placeimg.com/200/200/nature">
+                <h2 class="services-info__title">Servicio 1</h2>
+                <p class="services-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+            <article class="services-info">
+                <img class="services-info__imagen" src="http://placeimg.com/200/200/tech" alt="">
+                <h2 class="services-info__title">Servicio 2</h2>
+                <p class="services-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+            <article class="services-info">
+                <img class="services-info__imagen" src="http://placeimg.com/200/200/people" alt="">
+                <h2 class="services-info__title">Servicio 3</h2>
+                <p class="services-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+        </div>
+        <!-- fin sección de servicios -->
+
+
+        <!-- <h1>NOTICIAS, RECOMENDACIONES, BIOSEGURIDAD Y NUTRICIÓN</h1> OJO INICIO VIEJO SECCION NOTICIAS -->
+        <!-- inicio sección de noticias -->
+        <div id="news" class="seccion-noticias">
+            <h1 class="section-info">NOTICIAS, RECOMENDACIONES, BIOSEGURIDAD Y NUTRICIÓN </h1>
+            <article class="news-info">
+                <div class="news-header">
+                    <img class="news-info__imagen" src="https://c.tenor.com/kmVrMsZqwJ0AAAAC/mattdavella-bicep.gif" alt="">
+                    <h2 class="news-info__title">Gimnasios y el formato híbrido</h2>
+                </div>
+                <p class="news-info__text">
+                    Con la permanencia de las personas en sus hogares fue inevitable que se empezaran a buscar opciones para mantener el cuerpo en acción, 
+                    los entrenadores comenzaron a subir sus rutinas a redes sociales, páginas web o hacer guías en vivo. 
+                    Aunque la pandemia planteó un reto para el sector del entrenamiento, ahora se abre una posibilidad que podaría potenciar este negocio.
+                </p>
+                <span class="news-url"><a href="https://www.larepublica.co/ocio/innovaciones-tecnologicas-y-planes-que-crearon-los-gimnasios-con-su-formato-hibrido-3227844">Leer noticia completa >>></a></span>
+            </article>
+
+            <article class="news-info">
+                <div class="news-header">
+                    <img class="news-info__imagen" src="https://i.gifer.com/6CMu.gif" alt="">
+                    <h2 class="news-info__title">Vacunación sector de los ginmasios</h2>
+                </div>
+                <p class="news-info__text">
+                    ¿Por qué los gimnasios están tan adelantados en la vacunación? Los gimnasios, uno de los sectores que más ha sufrido a lo largo de 
+                    la pandemia por las restricciones para operar, han podido acelerar el proceso de vacunación.
+                    Unos ya tienen a todo su personal vacunado. Otros están en ese proceso. Le explicamos qué ha pasado con este sector en Colombia.
+                </p>
+                <span class="news-url"><a href="https://www.portafolio.co/negocios/empresas/gimnasios-en-colombia-llevan-adelantada-la-vacunacion-contra-el-covid-553474">Leer noticia completa >>></a></span>
+            </article>
+
+            <article class="news-info">
+                <div class="news-header">
+                    <img class="news-info__imagen" src="https://i.pinimg.com/originals/3e/fd/70/3efd70a07ddac4540839902ab46e0bf0.gif" alt="">
+                    <h2 class="news-info__title">Sistema inmunológico saludable</h2>
+                </div>
+                <p class="news-info__text">
+                    Ante la pandemia (COVID-19) 
+                    no existe un nutriente en particular que pueda optimizar su sistema inmunológico, pero 
+                    a través de los alimentos podemos mantener un sistema inmunológico saludable y ayudar a combatir cualquier patógeno.
+                </p>
+                <span class="news-url"><a href="https://baptisthealth.net/baptist-health-news/es/la-nutricion-adecuada-es-la-clave-para-mantener-un-sistema-inmunologico-saludable/">Leer noticia completa >>></a></span>
+            </article>
+
+            <article class="news-info">
+                <div class="news-header">
+                    <img class="news-info__imagen" src="https://thumbs.gfycat.com/RectangularMildBoutu-size_restricted.gif" alt="">
+                    <h2 class="news-info__title">Medidas de higiene en el gimnasio</h2>
+                </div>
+                <p class="news-info__text">
+                    Luego de permanecer cerrados por cuarentena, los lugares para realizar deporte abrieron sus puertas; 
+                    si te interesa hacer ejercicio en el gimnasio, 
+                    te recomendamos revisar si estás llevando a cabo las siguientes medidas de higiene.
+                </p>
+                <span class="news-url"><a href="https://blog.seccionamarilla.com.mx/que-medidas-de-higiene-considerar-antes-de-hacer-ejercicio-en-el-gimnasio/">Leer noticia completa >>></a></span>
+            </article>
+
+        </div>
+        <!-- fin sección de noticias -->
+
+
+        <h1>Equipo</h1>
+        <!-- inicio sección de equipo -->
+        <section id="team" class="seccion-equipo">
+
+            <article class="team-info">
+                <img class="team-info__imagen" src="http://placeimg.com/100/200/people" alt="">
+                <h2 class="team-info__title">Integrante 1</h2>
+                <p class="team-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+
+            <article class="team-info">
+                <img class="team-info__imagen" src="http://placeimg.com/100/200/tech" alt="">
+                <h2 class="team-info__title">Integrante 2</h2>
+                <p class="team-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+
+            <article class="team-info">
+                <img class="team-info__imagen" src="http://placeimg.com/100/200/nature" alt="">
+                <h2 class="team-info__title">Integrante 3</h2>
+                <p class="team-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+
+            <article class="team-info">
+                <img class="team-info__imagen" src="http://placeimg.com/100/200/arch" alt="">
+                <h2 class="team-info__title">Integrante 4</h2>
+                <p class="team-info__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quas voluptate magni repellat eligendi! Inventore voluptas
+                    voluptates quia voluptatum expedita, ducimus delectus dolore eaque maiores iusto modi eum aut corporis?
+                </p>
+            </article>
+
+        </section>
+        <!-- fin sección de equipo -->
+
+    </div>
+    <!-- fin contenido principal -->
+
+    <!-- Inicio pie del sitio -->
+    <div class="seccion-pie">
+        <article>
+            <h2>Contacto</h2>
+            <p>Aquí van varias lineas</p>
+            <p>Donde va la información de contacto</p>
+            <p>Como el teléfono y demás</p>
+        </article>
+        <article>
+            <h2>Otra Información</h2>
+            <p>Aquí van varias lineas</p>
+            <p>Donde va la otra información</p>
+            <p>Como el mapa del sitio o enlaces importantes</p>
+        </article>
+    </div>
+    <!-- fin pie del sitio -->
+
+</body>
+
+</html>
