@@ -1,27 +1,24 @@
 body{
-    margin-top: 0px;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
-    width: 1200px;
+    width: auto;
     background-color: #ffffff;
-    height: 2000px;
+    height: auto;
     -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
     margin: 0px auto;
     padding: 0 auto;
 }
 
 .team{
     display: flex;
-    flex-basis: 100px;
-    height: 600px;
-    margin-bottom: 50px;
+    height: auto;
     background-image: linear-gradient(rgb(247, 247, 247), white);
-    box-shadow: 10px 10px 20px #1c2937;
-    border-radius: 5px;
     color: #ffffff;
+    margin-bottom: 100px;
 }
 
 .titulo{
@@ -30,21 +27,20 @@ body{
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: xx-large;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
 
 .developer{
     display: flex;
+    width: 400px;
+    height: 450px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin: 10px;
     background-image: linear-gradient(#1c2937, #091018);
-    margin: 20px;
     box-shadow: 2px 2px 10px #1c2937;
     border-radius: 10px;
-    flex-basis: 100px;
     transition: all 0.25s;
+    margin-top: 20px;
 }
 
 .developer:hover{
@@ -54,18 +50,49 @@ body{
 
 .imgdeveloper{
     border-radius: 50%;
-
+    width: 90px;
+    height: 110px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .infodeveloper{
-    text-orientation: unset;
     text-align: justify;
-    padding: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    overflow: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .namedeveloper{
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: capitalize;
 }
+
+.infodeveloper::-webkit-scrollbar {
+    width: 8px;    
+    height: 8px;    
+}
+
+.infodeveloper::-webkit-scrollbar-thumb {
+    background: #98a1b1;
+    border-radius: 4px;
+}
+
+.infodeveloper::-webkit-scrollbar-track {
+    background: #1c2937;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
 
 .header{
     background-color: aqua;
