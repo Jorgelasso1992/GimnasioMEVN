@@ -29,6 +29,7 @@ body{
 
 }
 .container-logo{
+    color: #1e2937;
     width: 100%;
     height: inherit;
     background-color: azure;
@@ -46,6 +47,12 @@ body{
     background-position: center;
     height: 240px;
     /* margin-bottom: 20px; */
+}
+.container-imagen:hover{
+    opacity: 0.9;
+}
+a{
+    color: burlywood;
 }
 
 .nav-list{
@@ -201,6 +208,7 @@ hr{
 }
 
 .main-menu{
+    background-color: #8e2126;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
@@ -216,7 +224,7 @@ hr{
 .main-menu__link{
     text-decoration: none;
     font-size: 1em;
-    color: #3e3e3e;
+    color: #1e2937;
 }
 
 .main-menu__link:hover{
