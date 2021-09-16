@@ -222,11 +222,17 @@ hr{
 }
 
 /* estilos footer */
+
+.footer-container{
+    height: 60.5%;
+    margin:0 auto;
+}
+
 .footer-link {
     color:#ffffff;
     text-decoration: none;
     font-weight: bold;
-    margin:5px auto;
+    margin:10px 0;
 }
 
 .footer-link:hover{
@@ -236,7 +242,7 @@ hr{
 
 .footer-menu{
     width: 24.7%;
-    margin: 1px 0;
+    margin: 10px auto;
     color:#141e29;
     display: inline-grid;
     justify-content: center;
@@ -250,7 +256,12 @@ hr{
 .footer-text-center{
     color:#ffffff;
     text-align: center;
-    margin: 7px auto;
+    margin:0 auto;
+}
+
+.footer-legal{
+    background-color: #141e29;
+    height: 24px;
 }
 
 .footer-list{
@@ -260,7 +271,7 @@ hr{
 
 .footer-line{
     width: 95%;
-    margin: 2px auto;
+    margin: 0 auto;
     background-color: #ffffff;
 }
 
@@ -270,7 +281,8 @@ hr{
 
 .footer-image{
     text-align: center;
-    margin:1px auto;
+    margin:10px auto;
+    height: 30%;
 }
 
 .logo-image{
@@ -291,8 +303,5 @@ hr{
 .footer-text-contact{
     color:#ffffff;
     font-weight: bold;
-}
-
-.footer-container{
-    height: 262px;
+    margin:0 auto;
 }
