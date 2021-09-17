@@ -232,7 +232,7 @@ hr{
     color:#ffffff;
     text-decoration: none;
     font-weight: bold;
-    margin:10px 0;
+    margin-top:10px;
 }
 
 .footer-link:hover{
@@ -257,6 +257,7 @@ hr{
     color:#ffffff;
     text-align: center;
     margin:0 auto;
+    padding:3px;
 }
 
 .footer-legal{
@@ -280,15 +281,30 @@ hr{
 }
 
 .footer-image{
-    text-align: center;
     margin:10px auto;
     height: 30%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.gym-description{
+    width: 30%;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px auto;
+    color: #141e29;
 }
 
 .logo-image{
     width: 10%;
 	border-radius: 100%;
 	margin: 10px auto;
+}
+
+.gym-icon{
+    font-size: xxx-large;
+    color: #141e29;
+    margin: 10px auto;
 }
 
 .social-icon{
@@ -303,5 +319,5 @@ hr{
 .footer-text-contact{
     color:#ffffff;
     font-weight: bold;
-    margin:0 auto;
+    margin:10px auto;
 }
