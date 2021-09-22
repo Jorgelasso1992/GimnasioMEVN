@@ -1,0 +1,146 @@
+body{
+    margin-top:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 1200px;
+    background-color: #888888;
+    height: 400px;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: 0px auto;
+    padding: 0 auto;
+}
+
+.container-menu{
+    height: 60px;
+    background-color: antiquewhite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+
+}
+
+.site-title{
+    margin: 0;
+    padding: 0.36em 0;
+}
+
+.footer{
+    height: 400px;
+    background-color:#8e2126;
+    bottom: 0px;
+    /* position: fixed; */
+    /* width: 1200px; */
+}
+
+.section-text{
+    margin: 0;
+    color: #3e3e3e;
+    background: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* estilos footer */
+
+.footer-container{
+    height: 60.5%;
+    margin:0 auto;
+}
+
+.footer-link {
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+.footer-link:hover{
+    color: #141e29;
+    font-weight: bold;
+}
+
+.footer-menu{
+    width: 24.7%;
+    margin: 0 auto;
+    color:#141e29;
+    display: inline-grid;
+    justify-content: center;
+}
+
+.footer-title-list{
+    text-align: center;
+    margin:10px auto;
+}
+
+.footer-text-center{
+    color:aliceblue;
+    text-align: center;
+    margin:0 auto;
+    padding:13px;
+}
+
+.footer-legal{
+    background-color: #141e29;
+    height: 44px;
+}
+
+.footer-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-line{
+    width: 95%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.list-element{
+    margin: 10px auto;
+}
+
+.footer-image{
+    margin:10px auto;
+    height: 30%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.gym-description{
+    width: 30%;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px auto;
+    color: aliceblue;
+}
+
+.logo-image{
+    width: 10%;
+	border-radius: 100%;
+	margin: 10px auto;
+}
+
+.gym-icon{
+    font-size: 80px;
+    color: aliceblue;
+    margin: 10px auto;
+}
+
+.social-icon{
+    font-size: x-large;
+    color: aliceblue;
+}
+
+.social-icon:hover{
+    color: #141e29;
+}
+
+.footer-text-contact{
+    color:aliceblue;
+    font-weight: bold;
+    margin:10px auto;
+}
