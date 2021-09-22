@@ -42,7 +42,7 @@ body{
 }
 
 .container-imagen{
-    background-image: url('img/pexels-sabel-blanco-1480520.jpg');
+    background-image: url(../img/pexels-sabel-blanco-1480520.jpg);
     background-size: cover;
     background-position: center;
     height: 240px;
@@ -71,8 +71,7 @@ a{
 }
 
 .nav-element:hover{
-    text-decoration: underline;
-    font-weight: bold;
+    transform: scale(1.05);
 }
 
 .image-text{
@@ -82,21 +81,7 @@ a{
     text-align: center;
 }
 
-.section-1{
-    height: 500px;
-    background-color: rebeccapurple;
 
-}
-
-.section-2{
-    height: 500px;
-    background-color: gainsboro;
-}
-
-.section-3{
-    height: 500px;
-    background-color: coral;
-}
 
 .footer{
     height: 200px;
@@ -106,102 +91,7 @@ a{
     /* width: 1200px; */
 }
 
-.section-text{
-    margin: 0;
-    color: #3e3e3e;
-    background: white;
-    font-weight: bold;
-    text-align: center;
-}
 
-.col-3{
-    width: 33.08%;
-    height: 470px;
-    background-color: aquamarine;
-    display: inline-block;
-    padding: -15px;
-    margin-top: 5px;
-    text-align: center;
-}
-.col-5{
-    width: 19%;
-    height: 470px;
-    display: inline-block;
-    margin: 5px 4px 0;
-    text-align: center;
-    background-color: rgb(255, 177, 148);
-}
-
-.service-content{
-    padding: 0.5em 0;
-}
-.service-text{
-    padding: 10px;
-    text-align: justify;
-    bottom: 0;
-}
-
-.service-text.memebers{
-    font-style: italic; 
-}
-
-.section-news > div:first-child{
-    margin-bottom: 2px; 
-}
-.news{
-    width: 100%;
-    background-color: cadetblue;
-    height: 240px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-}
-
-.news > div:first-child{
-    margin: 0 6px;
-}
-
-.news-data{
-    width: 49%;
-    height: 100%;
-    background-color: rebeccapurple;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex; 
-}
-
-.news-image{
-    margin: 10px 0;
-    padding: 0 40px;
-    color: white;
-}
-
-.news-text{
-    color: white;
-    text-align: justify;
-    width: 49%;
-    padding: 1em 0;
-}
-
-.news-text > span.news-url{
-    text-align: right;
-}
-
-
-.fa-ambulance.news-logo{
-    padding: 0.25em 0;
-}
-
-
-.news-url{
-    font-size: 10px;
-    float: right;
-}
-
-.news-url > a{
-
-    color: #ffffff; 
-}
 
 hr{
     color: white;
@@ -223,13 +113,16 @@ hr{
 .dropdown{
     position: relative;
     display: inline-block;
+    
 }
+
 .dropdown-content{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 100px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    
 }
 .dropdown-content a{
     right: 10px;
@@ -238,6 +131,7 @@ hr{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -248,11 +142,45 @@ hr{
 
 .main-menu__link{
     text-decoration: none;
+    margin: 15px;
     font-size: 1em;
     color: #1e2937;
 }
 
 .main-menu__link:hover{
-    text-decoration: underline;
+    text-decoration: dashed;
     font-weight: bold;
+    color: #888888;
+    transition: all 0.3s 0.2s;
+}
+/* caracteristicas del slider de imagenes que salio feo  no funciono */
+.slider{
+    width: max-content;
+    height: 800px;
+    overflow: hidden;
+    animation: cambio 20s infinite;
+}
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+}
+.slider li{
+    list-style: none;
+    width:fit-content;
+}
+.slider li img{
+    width: 1200px;
+    height: 800px;
+}
+
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
 }
