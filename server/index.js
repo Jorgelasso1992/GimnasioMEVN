@@ -20,12 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // RUTAS
 app.get("/", (req, res) => {
   //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
-  res.sendFile(path.resolve("./dist/index.html"));
+  res.sendFile(path.resolve("../client/public/index.html"));
 });
 
 app.post("/", (req, res) => {
   //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
-  res.sendFile(path.resolve("./dist/index.html"));
+  res.sendFile(path.resolve("../client/public/index.html"));
 });
 
 //Cargar las peticiones de archivos del server al client
@@ -33,7 +33,7 @@ app.get("/css/*", (req, res) => {
   let css = req.url.replace(/\//g, '').replace("css", '').trim().toLowerCase();
   switch (css) {
     default:
-      res.sendFile(path.resolve("./dist/css/" + css + ""));
+      res.sendFile(path.resolve("../client/dist/css/" + css + ""));
       break;
   }
 });
@@ -42,7 +42,7 @@ app.get("/js/*", (req, res) => {
   let js = req.url.replace(/\//g, '').replace("js", '').trim().toLowerCase();
   switch (js) {
     default:
-      res.sendFile(path.resolve("./dist/js/" + js + ""));
+      res.sendFile(path.resolve("../client/dist/js/" + js + ""));
       break;
   }
 });
