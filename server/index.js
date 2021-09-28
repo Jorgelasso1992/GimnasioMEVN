@@ -1,5 +1,5 @@
-import express from 'express'; 
-import morgan from 'morgan'; 
+import express from 'express';
+import morgan from 'morgan';
 import cors from 'cors';
 // Para acceder al directorio actual 
 import path from 'path';
@@ -12,19 +12,44 @@ const app = express();
 //MIDDLEWARES
 app.use(morgan('tiny'));
 app.use(cors());
-app.use(express.json()); 
+app.use(express.json());
 //application/x-www-form-urlencoded 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // RUTAS
 app.get("/", (req, res) => {
-  res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
+  //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
+  res.sendFile(path.resolve("./dist/index.html"));
+});
+
+app.post("/", (req, res) => {
+  //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
+  res.sendFile(path.resolve("./dist/index.html"));
+});
+
+//Cargar las peticiones de archivos del server al client
+app.get("/css/*", (req, res) => {
+  let css = req.url.replace(/\//g, '').replace("css", '').trim().toLowerCase();
+  switch (css) {
+    default:
+      res.sendFile(path.resolve("./dist/css/" + css + ""));
+      break;
+  }
+});
+
+app.get("/js/*", (req, res) => {
+  let js = req.url.replace(/\//g, '').replace("js", '').trim().toLowerCase();
+  switch (js) {
+    default:
+      res.sendFile(path.resolve("./dist/js/" + js + ""));
+      break;
+  }
 });
 
 // Middleware para Vue.js router modo history 
-const history = require('connect-history-api-fallback'); 
-app.use(history()); 
+const history = require('connect-history-api-fallback');
+app.use(history());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //PUERTOS
