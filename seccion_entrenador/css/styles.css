@@ -31,3 +31,8 @@ main {
 .container{
 	padding:10%;
 }
+
+.fas .far{
+	width: 16px;
+	height: 16px;
+}
