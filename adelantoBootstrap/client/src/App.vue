@@ -12,9 +12,3 @@ export default{
 }
 
 </script>
-<style>
-@import '../assets/bootstrap/css/bootstrap.min.css';
-@import '../assets/css/Login-Form-Clean.css';
-@import '../assets/css/Registratin-Form-with-Photo.css';
-@import '../assets/css/styles.css';
-</style>

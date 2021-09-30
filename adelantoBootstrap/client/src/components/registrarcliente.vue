@@ -20,9 +20,14 @@
         </section>
     </v-app>   
 </template>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script>
 export default {
     name:"registrarcliente"
-}
+};
 </script>
+<style>
+@import '../assets/bootstrap/css/bootstrap.min.css';
+@import '../assets/css/Login-Form-Clean.css';
+@import '../assets/css/Registration-Form-with-Photo.css';
+@import '../assets/css/styles.css';
+</style>
