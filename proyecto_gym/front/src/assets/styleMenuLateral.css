@@ -1,0 +1,26 @@
+main {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 100vh;
+	max-height: 100vh;
+}
+
+.dropdown-toggle { 
+	outline: 0; 
+}
+
+.nav-flush .nav-link {
+	border-radius: 0;
+	text-align: left;
+}
+
+.icon{
+	width: 20px;
+	height: 20px;
+}
+
+.fs-4{
+	align-self: center;
+}

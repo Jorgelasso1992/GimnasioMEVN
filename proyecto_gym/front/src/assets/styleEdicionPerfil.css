@@ -1,0 +1,50 @@
+.user-profile {
+    margin: 5px;
+    text-align: center;
+}
+
+.user-image img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+h5.user-name {
+    margin: 10px;
+}
+
+h6.user-email {
+    margin: 0;
+    font-weight: 400;
+    color: #95999c;
+}
+
+.user-about {
+    margin: 10px;
+    text-align: center;
+}
+
+.user-about h5 {
+    margin: 10px;
+    color: #2e323c;
+}
+
+.user-about p {
+    font-size: 0.825rem;
+}
+
+.form-control {
+    border: 1px solid #cfd1d8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #ffffff;
+    color: #2e323c;
+}
+
+.card {
+    background: #ffffff;
+    border: 0;
+    margin-bottom: 1rem;
+}

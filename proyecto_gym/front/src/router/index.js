@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 //import Home from "../views/Home.vue";
 import PerfilEntrenador from "../views/PerfilEntrenador.vue";
+import InicioEntrenador from "../views/InicioEntrenador.vue";
+
 
 Vue.use(VueRouter);
 
@@ -22,6 +24,11 @@ const routes = [
   },*/
   {
     path: "/",
+    name: "InicioEntrenador",
+    component: InicioEntrenador,
+  },
+  {
+    path: "/perfil",
     name: "PerfilEntrenador",
     component: PerfilEntrenador,
   },

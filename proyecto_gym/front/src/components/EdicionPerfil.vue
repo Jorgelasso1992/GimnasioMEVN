@@ -90,5 +90,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../assets/styleEdicionPerfil.css";
 </style>
