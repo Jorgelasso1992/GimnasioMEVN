@@ -128,13 +128,13 @@
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Nombres</label
-                  ><input class="form-control" type="text" name="firstname" />
+                  ><input class="form-control" type="text" name="nombres" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Apellidos</label
-                  ><input class="form-control" type="text" name="firstname" />
+                  ><input class="form-control" type="text" name="apellidos" />
                 </div>
               </div>
             </div>
@@ -176,13 +176,13 @@
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Documento de identidad</label
-                  ><input class="form-control" type="text" name="lastname" />
+                  ><input class="form-control" type="text" name="id" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Teléfono</label
-                  ><input class="form-control" type="text" name="firstname" />
+                  ><input class="form-control" type="text" name="tel" />
                 </div>
               </div>
             </div>

@@ -3,10 +3,22 @@ import morgan from 'morgan';
 import cors from 'cors';
 // Para acceder al directorio actual 
 import path from 'path';
-// const bodyParser = require("body-parser");
-// const mongoose = require("mongoose");
+//Conexión a la base de datos
+import mongoose from 'mongoose';
 
 const app = express();
+
+//BD CONNECTION
+const uri = 'mongodb://localhost:27017/GymMEVN'; 
+const options = {useNewUrlParser: true, useUnifiedTopology: true}; 
+
+// Or using promises 
+mongoose.connect(uri, options).then( 
+  /** ready to use. The `mongoose.connect()` promise resolves to mongoose instance. */ 
+  () => { console.log('Conectado a DB') }, 
+  /** handle initial connection error */ 
+  err => { console.log(err) } 
+);
 
 
 //MIDDLEWARES
@@ -18,6 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // RUTAS
+
+app.use('/api', require('./routes/entrenador')); 
+
 app.get("/", (req, res) => {
   //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
   res.sendFile(path.resolve("../client/public/index.html"));
