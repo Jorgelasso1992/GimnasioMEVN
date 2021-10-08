@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 const app = express();
 
 //BD CONNECTION
-const uri = 'mongodb://localhost:27017/GymMEVN'; 
+const uri = 'mongodb+srv://dbGYM:GimnasioMEVN@cluster1.iibwx.mongodb.net/entrenador?authSource=admin&replicaSet=atlas-9moey3-shard-0&readPreference=primary&ssl=true'; 
 const options = {useNewUrlParser: true, useUnifiedTopology: true}; 
 
 // Or using promises 
