@@ -204,7 +204,6 @@ export default {
   name: "registroentrenador",
   data: () => ({}),
   methods: {},
-  created() {},
 };
 </script>
 
