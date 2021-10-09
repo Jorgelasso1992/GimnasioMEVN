@@ -14,7 +14,7 @@ const app = express();
 
 //CONEXION A BASE DE DATOS
 const mongoose = require('mongoose');
-const uri = 'mongodb://localhost:27017/prueba';
+const uri = 'mongodb+srv://atlas_user:colombiauser@cluster0.9nbjf.mongodb.net/Proyecto';
 const options = {useNewUrlParser: true, useUnifiedTopology: true};
 
 mongoose.connect(uri, options).then( 
