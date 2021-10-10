@@ -24,10 +24,10 @@
 
 <body><nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-custom">
     <div class="container"><img src="img/City_GYM_Logo.jpeg" width = "150px"/><a class="navbar-brand" href="#">GimnasioMVEN</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive"><span class="navbar-text">Bienvenido <%clientesList.forEach(cliente => {%><%= cliente.nombre %><%})%></span>
+        <div class="collapse navbar-collapse" id="navbarResponsive"><span class="navbar-text">Bienvenido <%data.clientesList.forEach(cliente => {%><%= cliente.nombre %><%})%></span>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">INICIAR SESIÓN</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><%= data.entrar %></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><%= data.registrarse %></a></li>
             </ul>
         </div>
     </div>

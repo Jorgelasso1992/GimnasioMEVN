@@ -36,15 +36,53 @@ const clienteSchema = {
     activo: Boolean 
 };
 
+
 const cliente = mongoose.model('clientes', clienteSchema )
 
-app.get('/', (req, res) => {
-    cliente.find({}, function(err, clientes) {
-        res.render('index', {
-            clientesList: clientes
-        })
+let entrar = "Entrar";
+let registrarse = "";
+let registrarse_1 = "Registrarse";
+
+/* app.get('/', (req, res) => {
+     cliente.find({activo: 'true'}, function(err, clientes) {
+        if (err){
+            res.render('index', { data: {
+                clientesList: "Bienvenido", entrar: "Entrar", registrarse_1: registrarse_1
+            }});
+        }
+        else{res.render('index', { data: {
+            clientesList: clientes, entrar: entrar, registrarse: registrarse  
+        }});
+    }
     })
+}) */
+
+/* app.get('/', (req, res) => {
+    cliente.find({activo: 'true'}, function(err, clientes) {
+       if (clientes){
+           res.render('index', { data: {
+                clientesList: clientes, entrar: entrar, registrarse: registrarse 
+           }});
+       }
+       else{res.render('index', { data: {
+                entrar: "iniciar sesión", registrarse: registrarse_1 
+       }});
+   }
+   })
+}) */
+
+
+app.get('/', (req, res) => {
+    cliente.find({activo: 'true'}, function(err, clientes) {
+        if (!clientes.length) {res.render('index', { data: {
+            clientesList: clientes, entrar: "Iniciar Sesión", registrarse: registrarse_1  
+        }});}
+        if (clientes.length) {res.render('index', { data: {
+            clientesList: clientes, entrar: entrar, registrarse: registrarse  
+        }});}
 })
+})
+
 
 app.use(express.static(__dirname + '/public'));
 
