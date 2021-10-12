@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <div class="container profile profile-view" id="profile">
+      <h1>Lista de entrenadores</h1>
       <div class="row">
         <div class="col-md-12 alert-col relative">
           <div
@@ -17,7 +18,7 @@
           </div>
         </div>
       </div>
-      <form>
+      <form @submit.prevent="registrarEntrenador()">
         <div class="row profile-row">
           <div class="col-lg-4 offset-lg-0">
             <div class="avatar">
@@ -122,19 +123,28 @@
             </div>
           </div>
           <div class="col-md-8">
-            <h1>Registro de entrenador</h1>
             <hr />
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Nombres</label
-                  ><input class="form-control" type="text" name="nombres" />
+                  ><input
+                    class="form-control"
+                    type="text"
+                    name="nombres"
+                    v-model="entrenador.nombres"
+                  />
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Apellidos</label
-                  ><input class="form-control" type="text" name="apellidos" />
+                  ><input
+                    class="form-control"
+                    type="text"
+                    name="apellidos"
+                    v-model="entrenador.apellidos"
+                  />
                 </div>
               </div>
             </div>
@@ -146,6 +156,7 @@
                 autocomplete="off"
                 required=""
                 name="email"
+                v-model="entrenador.email"
               />
             </div>
             <div class="row">
@@ -158,6 +169,7 @@
                     name="password"
                     autocomplete="off"
                     required=""
+                    v-model="entrenador.password"
                   />
                 </div>
               </div>
@@ -170,19 +182,30 @@
                     name="confirmpass"
                     autocomplete="off"
                     required=""
+                    v-model="entrenador.confirmpass"
                   />
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Documento de identidad</label
-                  ><input class="form-control" type="text" name="id" />
+                  ><input
+                    class="form-control"
+                    type="text"
+                    name="id"
+                    v-model="entrenador.id"
+                  />
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
                 <div class="form-group mb-3">
                   <label class="form-label">Teléfono</label
-                  ><input class="form-control" type="text" name="tel" />
+                  ><input
+                    class="form-control"
+                    type="text"
+                    name="tel"
+                    v-model="entrenador.tel"
+                  />
                 </div>
               </div>
             </div>
@@ -202,15 +225,47 @@
 <script>
 export default {
   name: "registroentrenador",
-  data: () => ({}),
-  methods: {},
+  data() {
+    return {
+      entrenador: {
+        nombres: "",
+        apellidos: "",
+        email: "",
+        password: "",
+        confirmpass: "",
+        id: "",
+        tel: "",
+      },
+    };
+  },
+  methods: {
+    registrarEntrenador() {
+      this.axios
+        .post("/nuevo-entrenador", this.entrenador)
+        .then((res) => {
+          this.entrenadores.push(res.data);
+          this.entrenador.nombres="";
+          this.entrenador.apellidos= "",
+          this.entrenador.email= "",
+          this.entrenador.password= "",
+          this.entrenador.confirmpass= "",
+          this.entrenador.id= "",
+          this.entrenador.tel= ""
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+
+        this.$router.push('/') 
+    },
+  },
 };
 </script>
 
 <style>
-@import '../assets/bootstrap/css/bootstrap.min.css';
-@import '../assets/css/Multiple-Input-Select-Pills.css';
-@import '../assets/css/Profile-Edit-Form-1.css';
-@import '../assets/css/Profile-Edit-Form.css';
-@import '../assets/css/styles.css';
+@import "../assets/bootstrap/css/bootstrap.min.css";
+@import "../assets/css/Multiple-Input-Select-Pills.css";
+@import "../assets/css/Profile-Edit-Form-1.css";
+@import "../assets/css/Profile-Edit-Form.css";
+@import "../assets/css/styles.css";
 </style>

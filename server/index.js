@@ -34,13 +34,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', require('./routes/entrenador')); 
 
 app.get("/", (req, res) => {
-  //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
-  res.sendFile(path.resolve("../client/public/index.html"));
+  res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
+  // res.sendFile(path.resolve("../client/public/index.html"));
 });
 
 app.post("/", (req, res) => {
-  //res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
-  res.sendFile(path.resolve("../client/public/index.html"));
+  res.send("Hola Mundo con nodemon cambia automaticamente el servidor");
+  //res.sendFile(path.resolve("../client/public/index.html"));
 });
 
 //Cargar las peticiones de archivos del server al client

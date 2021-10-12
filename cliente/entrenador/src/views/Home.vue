@@ -4,7 +4,6 @@
     <table class="table table-striped table-active">
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Documento Identidad</th>
           <th scope="col">Nombres</th>
           <th scope="col">Apellidos</th>
@@ -13,23 +12,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr v-for="(item,index) in entrenadores" :key="index">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.nombres}}</td>
+          <td>{{item.apellidos}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.tel}}</td>
         </tr>
       </tbody>
     </table>
@@ -40,7 +28,26 @@
 export default {
   name: "Home",
   data() {
-    return {};
+    return {
+      entrenadores: [],
+    };
+  },
+
+  created() {
+    this.mostrarEntrenadores();
+  },
+
+  methods: {
+    mostrarEntrenadores() {
+      this.axios
+        .get("/entrenador")
+        .then((res) => {
+          this.entrenadores = res.data;
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+    },
   },
 };
 </script>
