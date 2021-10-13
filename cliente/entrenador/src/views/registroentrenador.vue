@@ -1,24 +1,8 @@
 <template>
   <v-app>
     <div class="container profile profile-view" id="profile">
-      <h1>Lista de entrenadores</h1>
-      <div class="row">
-        <div class="col-md-12 alert-col relative">
-          <div
-            class="alert alert-info alert-dismissible absolue center"
-            role="alert"
-          >
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"
-            ></button
-            ><span>Perfil guardado correctamente</span>
-          </div>
-        </div>
-      </div>
       <form @submit.prevent="registrarEntrenador()">
+        <h1>Registrar entrenador</h1>
         <div class="row profile-row">
           <div class="col-lg-4 offset-lg-0">
             <div class="avatar">
