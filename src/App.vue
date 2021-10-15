@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/usuario1">Usuario 1</router-link> |
+      <!--<router-link to="/">Home</router-link> |-->
+      <router-link to="/">Usuario 1</router-link> |
       <router-link to="/usuario2">Usuario 2</router-link> |
       <router-link to="/usuario3">Usuario 3</router-link> |
       <router-link to="/usuario4">Usuario 4</router-link>

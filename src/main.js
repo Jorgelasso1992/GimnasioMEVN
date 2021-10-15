@@ -15,7 +15,7 @@ Vue.use(VueAxios, axios)
 
 // Agregamos la URL base de nuestra API
 axios.defaults.baseURL = 'http://localhost:3000/api';
-
+//axios.defaults.baseURL = 'https://guarded-ocean-09625.herokuapp.com/todo/add';
 Vue.config.productionTip = false
 
 new Vue({
