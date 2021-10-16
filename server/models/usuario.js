@@ -5,7 +5,8 @@ const usuarioSchema=new Schema({
     nombre:{type:String, required:[true, 'Nombre requerido']},
     apellido:String,
     correo:{type:String, required:[true, 'correo requerido']},
-    contraseña: String,
+    telefono:String,
+    contraseña:String,
     date:{type:Date, default:Date.now},
     activo:{type:Boolean, default:true}
 
